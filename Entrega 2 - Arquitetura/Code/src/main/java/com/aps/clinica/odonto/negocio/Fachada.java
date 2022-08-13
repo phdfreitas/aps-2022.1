@@ -1,11 +1,14 @@
 package com.aps.clinica.odonto.negocio;
 
+import com.aps.clinica.odonto.negocio.conta.Conta;
 import com.aps.clinica.odonto.negocio.paciente.ControladorRegPaciente;
 import com.aps.clinica.odonto.negocio.paciente.Paciente;
 import com.aps.clinica.odonto.negocio.recepcionista.ControladorRegRecepcionista;
 import com.aps.clinica.odonto.negocio.recepcionista.Recepcionista;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import java.io.IOException;
 
 @Component
 public class Fachada {
@@ -38,7 +41,11 @@ public class Fachada {
         controladorRegRecepcionista.novoRecepcionista(recepcionista);
     }
 
-    public void crarConta(Recepcionista recepcionista){
+    public void criarConta(Recepcionista recepcionista){
         controladorRegRecepcionista.criarConta(recepcionista);
+    }
+
+    public void enviarCredenciais(Conta conta) throws IOException {
+        controladorRegRecepcionista.enviarCredenciais(conta);
     }
 }

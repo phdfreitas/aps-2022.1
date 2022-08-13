@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.io.IOException;
+
 @Controller
 public class RecepcionistaController {
 
@@ -21,10 +23,11 @@ public class RecepcionistaController {
     }
 
     @PostMapping("recepcionista/novoRecepcionista")
-    public String novoPaciente(@ModelAttribute("recepcionista")Recepcionista recepcionista){
+    public String novoPaciente(@ModelAttribute("recepcionista")Recepcionista recepcionista) throws IOException {
 
         fachada.novoRecepcionista(recepcionista);
-        fachada.crarConta(recepcionista);
+        fachada.criarConta(recepcionista);
+        //fachada.enviarCredenciais(recepcionista.getConta()); -- Comentei pra não ficar enviando email toda hora
         return "redirect:/recepcionista/novoRecepcionista";
     }
 }

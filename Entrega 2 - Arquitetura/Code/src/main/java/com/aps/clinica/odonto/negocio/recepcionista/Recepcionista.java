@@ -1,5 +1,7 @@
 package com.aps.clinica.odonto.negocio.recepcionista;
 
+import com.aps.clinica.odonto.negocio.conta.Conta;
+
 import javax.persistence.*;
 
 @Entity
@@ -14,6 +16,10 @@ public class Recepcionista {
     private String cpf;
     private String telefone;
     private String email;
+
+    // Faz o mapeamento 1:1 de recepcionista e conta
+    @OneToOne(mappedBy = "recepcionista", cascade = CascadeType.ALL)
+    private Conta conta;
 
     public Recepcionista(){}
 
@@ -63,5 +69,13 @@ public class Recepcionista {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Conta getConta() {
+        return conta;
+    }
+
+    public void setConta(Conta conta) {
+        this.conta = conta;
     }
 }

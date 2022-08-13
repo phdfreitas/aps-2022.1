@@ -1,5 +1,7 @@
 package com.aps.clinica.odonto.negocio.conta;
 
+import com.aps.clinica.odonto.negocio.recepcionista.Recepcionista;
+
 import javax.persistence.*;
 
 @Entity
@@ -10,15 +12,18 @@ public class Conta {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String email;
     private String senha;
+
+    @OneToOne
+    @MapsId
+    private Recepcionista recepcionista; // Mapeamento 1:1, vai criar a chave estrangeira
 
     public Conta(){}
 
-    public Conta(Long id, String email, String senha) {
+    public Conta(Long id, Recepcionista recepcionista, String senha) {
         this.id = id;
-        this.email = email;
         this.senha = senha;
+        this.recepcionista = recepcionista;
     }
 
     public Long getId() {
@@ -29,19 +34,19 @@ public class Conta {
         this.id = id;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public String getSenha() {
         return senha;
     }
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public Recepcionista getRecepcionista() {
+        return recepcionista;
+    }
+
+    public void setRecepcionista(Recepcionista recepcionista) {
+        this.recepcionista = recepcionista;
     }
 }
