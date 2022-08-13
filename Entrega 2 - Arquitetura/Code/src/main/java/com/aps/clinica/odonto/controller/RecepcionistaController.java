@@ -24,6 +24,7 @@ public class RecepcionistaController {
     public String novoPaciente(@ModelAttribute("recepcionista")Recepcionista recepcionista){
 
         fachada.novoRecepcionista(recepcionista);
+        fachada.crarConta(recepcionista);
         return "redirect:/recepcionista/novoRecepcionista";
     }
 }

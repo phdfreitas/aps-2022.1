@@ -37,4 +37,8 @@ public class Fachada {
     public void novoRecepcionista(Recepcionista recepcionista){
         controladorRegRecepcionista.novoRecepcionista(recepcionista);
     }
+
+    public void crarConta(Recepcionista recepcionista){
+        controladorRegRecepcionista.criarConta(recepcionista);
+    }
 }
