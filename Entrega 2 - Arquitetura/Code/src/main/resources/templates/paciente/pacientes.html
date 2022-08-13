@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paciente</title>
+</head>
+<body>
+
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Telefone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="paciente: ${pacientes}">
+                    <td th:text="${paciente.nome}"></td>
+                    <td th:text="${paciente.cpf}"></td>
+                    <td th:text="${paciente.telefone}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

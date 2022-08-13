@@ -1,0 +1,23 @@
+package com.aps.clinica.odonto.dados.paciente;
+
+import com.aps.clinica.odonto.negocio.paciente.Paciente;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class RepositorioPacientes implements IRepositorioPacientes {
+
+    @Autowired
+    private PacienteDAO pacienteDAO;
+
+    @Override
+    public void novoPaciente(Paciente paciente) {
+        pacienteDAO.save(paciente);
+    }
+
+    @Override
+    public Iterable<Paciente> getAll(){
+        return pacienteDAO.findAll();
+    }
+
+}
