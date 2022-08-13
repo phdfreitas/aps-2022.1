@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/paciente/novoPaciente" th:object="${paciente}"
+          method="POST">
+
+        <!-- Add hidden form field to handle update -->
+        <input type="text" th:field="${paciente.id}">
+        <input type="text" th:field="${paciente.cpf}">
+        <input type="text" th:field="${paciente.nome}">
+        <input type="text" th:field="${paciente.telefone}">
+        <button type="submit" > Atualizar Paciente</button>
+    </form>
+
+</body>
+</html>

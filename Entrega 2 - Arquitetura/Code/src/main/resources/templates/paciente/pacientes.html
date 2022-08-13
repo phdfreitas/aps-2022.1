@@ -13,6 +13,7 @@
                     <th>Nome</th>
                     <th>CPF</th>
                     <th>Telefone</th>
+                    <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
@@ -20,6 +21,15 @@
                     <td th:text="${paciente.nome}"></td>
                     <td th:text="${paciente.cpf}"></td>
                     <td th:text="${paciente.telefone}"></td>
+                    <td>
+                        <a th:href="@{paciente/atualizar/{id}(id=${paciente.id})}">
+                            Atualizar
+                        </a>
+                        |
+                        <a th:href="@{paciente/excluir/{id}(id=${paciente.id})}">
+                            Excluir
+                        </a>
+                    </td>
                 </tr>
             </tbody>
         </table>

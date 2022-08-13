@@ -14,6 +14,14 @@ public class CadastroPacientes {
         repositorioPacientes.novoPaciente(paciente);
     }
 
+    public Paciente existe(Long id){
+        return repositorioPacientes.existe(id);
+    }
+
+    public void excluirPaciente(Long id){
+        repositorioPacientes.excluirPaciente(id);
+    }
+
     public Iterable<Paciente> getAll(){
         return repositorioPacientes.getAll();
     }

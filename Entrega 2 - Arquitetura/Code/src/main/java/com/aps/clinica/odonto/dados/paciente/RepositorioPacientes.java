@@ -16,6 +16,16 @@ public class RepositorioPacientes implements IRepositorioPacientes {
     }
 
     @Override
+    public Paciente existe(Long id) {
+        return pacienteDAO.getReferenceById(id);
+    }
+
+    @Override
+    public void excluirPaciente(Long id) {
+        pacienteDAO.deleteById(id);
+    }
+
+    @Override
     public Iterable<Paciente> getAll(){
         return pacienteDAO.findAll();
     }

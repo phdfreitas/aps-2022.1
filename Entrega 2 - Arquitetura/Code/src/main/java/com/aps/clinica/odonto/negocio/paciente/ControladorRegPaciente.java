@@ -1,5 +1,6 @@
 package com.aps.clinica.odonto.negocio.paciente;
 
+import org.apache.juli.logging.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -13,8 +14,15 @@ public class ControladorRegPaciente {
         cadastroPacientes.novoPaciente(paciente);
     }
 
+    public Paciente existe(Long id){
+        return cadastroPacientes.existe(id);
+    }
+
+    public void excluirPaciente(Long id){
+        cadastroPacientes.excluirPaciente(id);
+    }
+
     public Iterable<Paciente> getAll(){
         return cadastroPacientes.getAll();
     }
-
 }

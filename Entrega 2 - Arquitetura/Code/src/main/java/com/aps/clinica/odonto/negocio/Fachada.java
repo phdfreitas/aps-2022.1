@@ -15,6 +15,14 @@ public class Fachada {
         controladorRegPaciente.novoPaciente(paciente);
     }
 
+    public Paciente existe(Long id){
+        return controladorRegPaciente.existe(id);
+    }
+
+    public void excluirPaciente(Long id){
+        controladorRegPaciente.excluirPaciente(id);
+    }
+
     public Iterable<Paciente> getAllPacientes(){
         return controladorRegPaciente.getAll();
     }
