@@ -45,7 +45,7 @@ public class Fachada {
         controladorRegRecepcionista.criarConta(recepcionista);
     }
 
-    public void enviarCredenciais(Conta conta) throws IOException {
+    public void enviarCredenciais(Conta conta) {
         controladorRegRecepcionista.enviarCredenciais(conta);
     }
 }
