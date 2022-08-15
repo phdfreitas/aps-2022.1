@@ -18,12 +18,12 @@ public class RecepcionistaController {
     private Fachada fachada;
 
     @GetMapping("recepcionista/novoRecepcionista")
-    public String novoPaciente(){
+    public String novoRecepcionista(){
         return "recepcionista/recepcionista-cadastro";
     }
 
     @PostMapping("recepcionista/novoRecepcionista")
-    public String novoPaciente(@ModelAttribute("recepcionista")Recepcionista recepcionista) throws IOException {
+    public String novoRecepcionista(@ModelAttribute("recepcionista")Recepcionista recepcionista) throws IOException {
 
         fachada.novoRecepcionista(recepcionista);
         fachada.criarConta(recepcionista);
