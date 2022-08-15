@@ -27,7 +27,7 @@ public class RecepcionistaController {
 
         fachada.novoRecepcionista(recepcionista);
         fachada.criarConta(recepcionista);
-        //fachada.enviarCredenciais(recepcionista.getConta()); -- Comentei pra não ficar enviando email toda hora
+        fachada.enviarCredenciais(recepcionista.getConta());
         return "redirect:/recepcionista/novoRecepcionista";
     }
 }
