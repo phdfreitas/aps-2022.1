@@ -40,12 +40,4 @@ public class Fachada {
     public void novoRecepcionista(Recepcionista recepcionista){
         controladorRegRecepcionista.novoRecepcionista(recepcionista);
     }
-
-    public void criarConta(Recepcionista recepcionista){
-        controladorRegRecepcionista.criarConta(recepcionista);
-    }
-
-    public void enviarCredenciais(Conta conta) {
-        controladorRegRecepcionista.enviarCredenciais(conta);
-    }
 }

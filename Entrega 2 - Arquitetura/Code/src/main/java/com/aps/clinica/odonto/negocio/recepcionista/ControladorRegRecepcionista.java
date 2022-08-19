@@ -21,6 +21,8 @@ public class ControladorRegRecepcionista {
 
     public void novoRecepcionista(Recepcionista recepcionista){
         cadastroRecepcionista.novoRecepcionista(recepcionista);
+        criarConta(recepcionista);
+        enviarCredenciais(recepcionista.getConta());
     }
 
     public void criarConta(Recepcionista recepcionista){

@@ -26,8 +26,6 @@ public class RecepcionistaController {
     public String novoRecepcionista(@ModelAttribute("recepcionista")Recepcionista recepcionista) throws IOException {
 
         fachada.novoRecepcionista(recepcionista);
-        fachada.criarConta(recepcionista);
-        fachada.enviarCredenciais(recepcionista.getConta());
         return "redirect:/recepcionista/novoRecepcionista";
     }
 }
