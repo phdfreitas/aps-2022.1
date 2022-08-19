@@ -1,6 +1,5 @@
-package com.aps.clinica.odonto.negocio.paciente;
+package com.aps.clinica.odonto.paciente.negocio;
 
-import org.apache.juli.logging.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

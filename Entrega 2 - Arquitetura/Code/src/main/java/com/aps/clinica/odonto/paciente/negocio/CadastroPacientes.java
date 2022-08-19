@@ -1,6 +1,6 @@
-package com.aps.clinica.odonto.negocio.paciente;
+package com.aps.clinica.odonto.paciente.negocio;
 
-import com.aps.clinica.odonto.dados.paciente.IRepositorioPacientes;
+import com.aps.clinica.odonto.paciente.dados.IRepositorioPacientes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

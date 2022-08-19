@@ -1,9 +1,8 @@
-package com.aps.clinica.odonto.negocio.recepcionista;
+package com.aps.clinica.odonto.recepcionista.negocio;
 
 import com.aps.clinica.odonto.email.EnviarCredenciaisRecepcionista;
-import com.aps.clinica.odonto.email.IEnviarEmail;
-import com.aps.clinica.odonto.negocio.conta.CadastroConta;
-import com.aps.clinica.odonto.negocio.conta.Conta;
+import com.aps.clinica.odonto.conta.negocio.CadastroConta;
+import com.aps.clinica.odonto.conta.negocio.Conta;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

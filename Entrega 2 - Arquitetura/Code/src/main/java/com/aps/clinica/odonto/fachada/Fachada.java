@@ -1,14 +1,11 @@
-package com.aps.clinica.odonto.negocio;
+package com.aps.clinica.odonto.fachada;
 
-import com.aps.clinica.odonto.negocio.conta.Conta;
-import com.aps.clinica.odonto.negocio.paciente.ControladorRegPaciente;
-import com.aps.clinica.odonto.negocio.paciente.Paciente;
-import com.aps.clinica.odonto.negocio.recepcionista.ControladorRegRecepcionista;
-import com.aps.clinica.odonto.negocio.recepcionista.Recepcionista;
+import com.aps.clinica.odonto.paciente.negocio.ControladorRegPaciente;
+import com.aps.clinica.odonto.paciente.negocio.Paciente;
+import com.aps.clinica.odonto.recepcionista.negocio.ControladorRegRecepcionista;
+import com.aps.clinica.odonto.recepcionista.negocio.Recepcionista;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import java.io.IOException;
 
 @Component
 public class Fachada {

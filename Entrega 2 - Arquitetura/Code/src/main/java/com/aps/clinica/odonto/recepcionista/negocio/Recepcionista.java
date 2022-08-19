@@ -1,6 +1,6 @@
-package com.aps.clinica.odonto.negocio.recepcionista;
+package com.aps.clinica.odonto.recepcionista.negocio;
 
-import com.aps.clinica.odonto.negocio.conta.Conta;
+import com.aps.clinica.odonto.conta.negocio.Conta;
 
 import javax.persistence.*;
 

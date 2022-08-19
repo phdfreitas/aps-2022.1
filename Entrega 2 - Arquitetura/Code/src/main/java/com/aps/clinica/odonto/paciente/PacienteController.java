@@ -1,7 +1,7 @@
-package com.aps.clinica.odonto.controller;
+package com.aps.clinica.odonto.paciente;
 
-import com.aps.clinica.odonto.negocio.Fachada;
-import com.aps.clinica.odonto.negocio.paciente.Paciente;
+import com.aps.clinica.odonto.fachada.Fachada;
+import com.aps.clinica.odonto.paciente.negocio.Paciente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

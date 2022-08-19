@@ -1,4 +1,4 @@
-package com.aps.clinica.odonto.negocio.paciente;
+package com.aps.clinica.odonto.paciente.negocio;
 
 import javax.persistence.*;
 

@@ -1,6 +1,6 @@
 package com.aps.clinica.odonto.email;
 
-import com.aps.clinica.odonto.negocio.conta.Conta;
+import com.aps.clinica.odonto.conta.negocio.Conta;
 import com.sendgrid.Method;
 import com.sendgrid.Request;
 import com.sendgrid.Response;

@@ -1,7 +1,7 @@
 package com.aps.clinica.odonto.config;
 
-import com.aps.clinica.odonto.negocio.Fachada;
-import com.aps.clinica.odonto.negocio.paciente.Paciente;
+import com.aps.clinica.odonto.fachada.Fachada;
+import com.aps.clinica.odonto.paciente.negocio.Paciente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;

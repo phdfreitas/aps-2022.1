@@ -1,6 +1,6 @@
-package com.aps.clinica.odonto.dados.conta;
+package com.aps.clinica.odonto.conta.dados;
 
-import com.aps.clinica.odonto.negocio.conta.Conta;
+import com.aps.clinica.odonto.conta.negocio.Conta;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
