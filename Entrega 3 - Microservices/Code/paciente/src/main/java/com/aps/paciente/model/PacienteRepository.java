@@ -12,4 +12,9 @@ public class PacienteRepository implements IPacienteRepository{
     public void cadastrar(Paciente paciente) {
         pacienteDAO.save(paciente);
     }
+
+    @Override
+    public boolean existe(Long id) {
+        return pacienteDAO.existsById(id);
+    }
 }

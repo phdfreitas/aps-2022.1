@@ -4,4 +4,6 @@ public interface IPacienteRepository {
 
     void cadastrar(Paciente paciente);
 
+    boolean existe(Long id);
+
 }

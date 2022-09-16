@@ -13,4 +13,8 @@ public class PacienteCollection {
         pacienteRepository.cadastrar(paciente);
     }
 
+    public boolean existe(Long id){
+        return pacienteRepository.existe(id);
+    }
+
 }

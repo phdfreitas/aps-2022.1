@@ -12,4 +12,8 @@ public class PacienteController {
     public void cadastrar(PacienteDTO pacienteDTO){
         pacienteCollection.cadastrar(pacienteDTO.toEntity());
     }
+
+    public boolean existe(Long id){
+        return pacienteCollection.existe(id);
+    }
 }
