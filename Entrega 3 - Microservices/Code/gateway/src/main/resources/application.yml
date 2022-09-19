@@ -1,0 +1,20 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      routes:
+        - id: paciente
+          uri: lb://paciente
+          predicates:
+            - Path=/paciente/**
+        - id: consulta
+          uri: lb://consulta
+          predicates:
+            - Path=/consulta/**
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: http://localhost:${server.port}:${spring.application.name}
