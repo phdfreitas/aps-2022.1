@@ -1,0 +1,21 @@
+services:
+    paciente:
+        build:
+            context: ./paciente/
+        depends_on:
+            - discovery
+    consulta:
+        build:
+            context: ./consulta/
+        depends_on:
+             - discovery
+    discovery:
+        build:
+            context: ./discovery-server/
+        ports:
+            - "8761:8761"
+    gateway:
+        build:
+            context: ./gateway
+        ports:
+             - "8084:8084"
