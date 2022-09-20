@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.text.ParseException;
+
 @Controller
 @RequestMapping("/consulta")
 @Slf4j
@@ -24,7 +26,7 @@ public class ConsultaMVCControler {
     }
 
     @PostMapping("novaConsulta")
-    public String novaConsulta(@ModelAttribute ConsultaDTO consultaDTO){
+    public String novaConsulta(@ModelAttribute ConsultaDTO consultaDTO) throws ParseException {
 
         controller.agendar(consultaDTO);
         return "redirect:/consulta/novaConsulta";

@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.text.ParseException;
+
 @Component
 public class ConsultaController {
 
@@ -14,7 +16,7 @@ public class ConsultaController {
     private IPacienteService pacienteService;
 
     @Transactional
-    public void agendar(ConsultaDTO consultaDTO){
+    public void agendar(ConsultaDTO consultaDTO) throws ParseException {
         Consulta consulta = consultaDTO.toEntity();
         boolean pacienteExiste = pacienteService.pacienteExiste(consulta.getPaciente());
 
