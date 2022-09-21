@@ -9,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.ParseException;
+
 @Controller
 @RequestMapping("/paciente")
 @Slf4j
@@ -24,7 +26,7 @@ public class PacienteMVCController {
     }
 
     @PostMapping("novoPaciente")
-    public String novoPaciente(@ModelAttribute PacienteDTO pacienteDTO){
+    public String novoPaciente(@ModelAttribute PacienteDTO pacienteDTO) throws ParseException {
 
         controller.cadastrar(pacienteDTO);
         return "redirect:/paciente/novoPaciente";

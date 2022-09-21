@@ -1,5 +1,6 @@
 server:
   port: 8084
+  
 spring:
   application:
     name: gateway
@@ -14,7 +15,3 @@ spring:
           uri: lb://consulta
           predicates:
             - Path=/consulta/**
-eureka:
-  instance:
-    prefer-ip-address: true
-    instance-id: http://localhost:${server.port}:${spring.application.name}
